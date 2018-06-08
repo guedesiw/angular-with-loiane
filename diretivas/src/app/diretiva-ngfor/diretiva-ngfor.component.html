@@ -1,0 +1,17 @@
+<p>
+  diretiva-ngfor works!
+</p>
+
+<ul>
+  <li *ngFor="let curso of cursos, let i = index" >{{ i+1 }} - {{ curso }}</li>
+</ul>
+<ul>
+    <li ng-bind-template="ngFor let curso of cursos, let i = index" >{{ i+1 }} - {{ curso }}</li>
+  </ul>
+<div>
+  <ul>
+    <ng-template ngFor [ngForOf]="cursos" let-curso let-i="index">
+    <li>{{ i+1 }} - {{ curso }}</li>
+  </ng-template>
+  </ul>
+</div>

@@ -1,0 +1,26 @@
+<p fundoAmarelo >
+    Texto com fundo amarelo.
+</p>
+
+<p higlightMouse>
+  Texto com HightLight quando passar o mouse.
+</p>
+
+<p highlight [defaultColor]="'grey'" [highlightColor]="'red'">
+    Texto com HightLight quando passar o mouse.
+</p>
+
+<h1>NG ELSE</h1>
+
+<div *ngElse="mostrarCursos" >
+  <h1>Lista de cursos</h1>
+</div>
+<div *ngElse="mostrarCursos" >
+  <h1>Não existem cursos para seram listados</h1>
+</div>
+<div>
+  <button (click)="onMostrarCursos()">Clique Aqui</button>
+</div>
+<ng-template [ngElse]="mostrarCursos">
+    <div>Não existem cursos para seram listados</div>
+</ng-template>

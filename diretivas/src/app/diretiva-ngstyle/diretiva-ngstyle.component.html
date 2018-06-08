@@ -1,0 +1,26 @@
+<h3>Styles com property biding (style binding)</h3>
+<button
+  [style.backgroundColor]="ativo ? 'blue' : 'gray'"
+  [style.color]="ativo ? 'white' : 'black'"
+  [style.fontWeight]="ativo ? 'bold' : 'normal'"
+  [style.fontSize]="tamanhoFonte + 'px'"
+  [style.active]="ativo"
+  (click)="mudarAtivo()"
+  >
+  Mudar atributo {{ ativo ? 'ativo' : 'desativado' }}
+</button>
+
+<h3>Styles com property biding (style binding)</h3>
+
+<button
+  [ngStyle]="{
+  }"
+  [style.backgroundColor]="ativo ? 'blue' : 'gray'"
+  [style.color]="ativo ? 'white' : 'black'"
+  [style.fontWeight]="ativo ? 'bold' : 'normal'"
+  [style.fontSize]="tamanhoFonte + 'px'"
+  [style.active]="ativo"
+  (click)="mudarAtivo()"
+  >
+  Mudar atributo {{ ativo ? 'ativo' : 'desativado' }}
+</button>

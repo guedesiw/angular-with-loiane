@@ -1,0 +1,39 @@
+<h1>
+  NGIF
+</h1>
+<div *ngIf="cursos.length > 0" >
+  <h1>Lista de cursos</h1>
+</div>
+<div *ngIf="cursos.lenght == 0" >
+  <h1>Não existem cursos para seram listados</h1>
+</div>
+<div *ngIf="mostrarCursos" >
+  <h1>Lista de cursos</h1>
+</div>
+<div *ngIf="!mostrarCursos" >
+  <h1>Não existem cursos para seram listados</h1>
+</div>
+<div>
+  <button (click)="onMostrarCursos()">Clique Aqui</button>
+</div>
+<div [hidden]="!mostrarCursos" >
+  <h1>Lista de cursos</h1>
+</div>
+<div [hidden]="mostrarCursos" >
+  <h1>Não existem cursos para seram listados</h1>
+</div>
+<div>
+<br><br><br>
+<h1>Removendo o * usando tempalte
+</h1>
+<div *ngIf="mostrarCursos" >
+  <h1>Lista de cursos</h1>
+</div>
+
+<ng-template [ngIf]="mostrarCursos">
+    <div>Lista de cursos Template DIV</div> 
+</ng-template>  
+
+<div ng-bind-template="ngif mostrarCursos">
+  <div>Lista de cursos Template DIV2</div> 
+</div>
